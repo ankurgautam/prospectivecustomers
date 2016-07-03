@@ -101,7 +101,7 @@ head(bank_data)
 ## 5 5 may 226 1 -1 0 unknown no
 ## 6 23 feb 141 2 176 3 failure no
 ```
-##Data Cleansing
+
 1. The ranges of values in each of the variables (columns) look ok without any kind of outliers
 2. There is equal distribution of the three classes - setosa, versicolor and virginia.
 
@@ -313,7 +313,6 @@ plot(x=seq(1,50, by=1), y=accuracy, type="l", col="red",
 main="Effect of increasing tree size", xlab="Tree Size", ylab="Accuracy")
 ```
 
-Effect of increasing tree size
 ![alt text](https://github.com/ankurgautam/prospectivecustomers/blob/master/Viz/tree%20size%20vs%20accuracy.png "Effect of increasing tree size")
 
 
