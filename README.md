@@ -14,6 +14,9 @@ exercise.
 6. Variable Reduction
 
 ##Data Engineering & Analysis
+
+
+###Loading and understanding the dataset
 ```{r}
 setwd("E:/Mission Machine Learning/Git/prospectivecustomers")
 
@@ -22,7 +25,6 @@ bank_data <- read.table("Data/bank.csv", header=TRUE,sep=";")
 str(bank_data)
 ```
 
-###Loading and understanding the dataset
 ```
 ## 'data.frame': 4521 obs. of 17 variables:
 ## $ age : int 30 33 35 30 59 35 36 39 41 43 ...
@@ -101,10 +103,12 @@ head(bank_data)
 ```
 ##Data Cleansing
 1. The ranges of values in each of the variables (columns) look ok without any kind of outliers
-2. There is equal distribution of the three classes - setosa, versicolor and virginia
+2. There is equal distribution of the three classes - setosa, versicolor and virginia.
+
 No cleansing required
 
-Correlations - Given the large number of predictors, we would like to start with a correlation analysis to
+###Correlations 
+Given the large number of predictors, we would like to start with a correlation analysis to
 see if some variables can be dropped
 
 ```{r}
@@ -159,7 +163,8 @@ Pearson Correlation:
 ![alt text](https://github.com/ankurgautam/prospectivecustomers/blob/master/Viz/pairspanel3.png "Correlations")
 
 
-Data Transformations 
+###Data Transformations
+ 
 1. Convert age into a binned range.
 2. Convert marital status into indicator variables. We could do the same for all other factors too, but we
 choose not to. Indicator variables may or may not improve predictions. It is based on the specific data
@@ -189,7 +194,7 @@ boxplot( pdays ~ y, data=new_data,col="maroon")
 ```
 
 Plots: 
-![alt text](https://github.com/ankurgautam/prospectivecustomers/blob/master/Viz/plots.png Plots
+![alt text](https://github.com/ankurgautam/prospectivecustomers/blob/master/Viz/plots.png "Plots")
 
 
 ##Modeling & Prediction
@@ -309,6 +314,6 @@ main="Effect of increasing tree size", xlab="Tree Size", ylab="Accuracy")
 ```
 
 Effect of increasing tree size
-![alt text](https://github.com/ankurgautam/prospectivecustomers/blob/master/Viz/tree size vs accuracy.png Effect of increasing tree size
+![alt text](https://github.com/ankurgautam/prospectivecustomers/blob/master/Viz/tree%20size%20vs%20accuracy.png "Effect of increasing tree size")
 
 
